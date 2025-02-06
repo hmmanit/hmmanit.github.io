@@ -241,7 +241,7 @@ The last one, I want to upload our debug builds to workflow artifacts:
 
 ```
 - name: Upload artifacts
-  uses: actions/upload-artifact@v3
+  uses: actions/upload-artifact@v4
   with:
     name: Debug builds
     path: |
@@ -321,7 +321,7 @@ jobs:
           app_file_path: app/build/outputs/apk/production/debug/app-production-debug.apk
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v4
         with:
           name: Debug builds
           path: |
@@ -422,7 +422,7 @@ Then I will also upload the artifact like the develop workflow:
 
 ```
 - name: Upload artifact
-  uses: actions/upload-artifact@v3.1.1
+  uses: actions/upload-artifact@v4
   with:
     name: Release artifact
     path: app/build/outputs/apk/production/release/*.apk
@@ -552,7 +552,7 @@ jobs:
           keyPassword: ${{ secrets.RELEASE_KEY_ALIAS_PASSWORD }}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v4
         with:
           name: Release artifact
           path: app/build/outputs/apk/production/release/*.apk
