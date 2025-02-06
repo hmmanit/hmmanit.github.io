@@ -7,26 +7,6 @@ nav-menu: true
 ---
 
 <section id="two" class="spotlights">
-    <section>
-		<a href="celebe" class="image">
-			<img src="{% link assets/images/celebe.webp %}" alt="" data-position="center center" />
-		</a>
-		<div class="content">
-			<div class="inner">
-				<header class="major">
-					<h3>CELEBe</h3>May 2023 - Now
-                    <h4>Senior Android Developer</h4>
-				</header>
-                <h5>Project: CELEBe</h5>
-				<p>
-                    Participating in developing the CELEBe application, a short-form video platform.
-                </p>
-				<ul class="actions">
-					<li><a href="celebe" class="button">Read more</a></li>
-				</ul>
-			</div>
-		</div>
-	</section>
 	<section>
 		<a href="anyses" class="image">
 			<img src="{% link assets/images/anyses.webp %}" alt="" data-position="center center" />
@@ -34,7 +14,7 @@ nav-menu: true
 		<div class="content">
 			<div class="inner">
 				<header class="major">
-					<h3>AnySES</h3>Nov 2021 - May 2023
+					<h3>AnySES</h3>Nov 2021 - Now
                     <h4>Android Team Leader</h4>
 				</header>
                 <h5>Project: Outsource projects & Company products</h5>
