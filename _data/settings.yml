@@ -99,22 +99,28 @@ skills:
 experience-title: Experience
 experience:
   - {
-      name: Junior UX Designer,
-      icon: "icon-1.png",
-      date: "Jan 2007 - Feb 2009",
-      organization: "WEBEX",
+    name: CELEBe,
+    icon: "celebe.png",
+    date: "May 2023 - Present",
+    organization: "Android Developer",
+  }
+  - {
+      name: AnySES,
+      icon: "anyses.png",
+      date: "Nov 2021 - May 2023",
+      organization: "Android Team Leader",
     }
   - {
-      name: UX & UI Designer,
-      icon: "icon-2.png",
-      date: "Mar 2009 - Aug 2014",
-      organization: "AUGMEDIX",
+      name: Samsung HCMC R&D Center,
+      icon: "samsung.png",
+      date: "Nov 2019 - Oct 2021",
+      organization: "Android Developer",
     }
   - {
-      name: Senior UI Designer,
-      icon: "icon-3.png",
-      date: "Sep 2014 - Present",
-      organization: "THEMEFISHER",
+      name: TMA Solutions,
+      icon: "tma.png",
+      date: "Mar 2019 - Oct 2019",
+      organization: "Java Developer",
     }
 
 #-------------------------------
