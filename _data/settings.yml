@@ -88,10 +88,23 @@ team:
 
 skills-title: Skills
 skills:
-  - { name: Web Design, color: "#fdb157", value: "90%" }
-  - { name: Logo Design, color: "#9473e6", value: "60%" }
-  - { name: After Effects, color: "#bdecf6", value: "80%" }
-  - { name: Web App, color: "#ffbcaa", value: "70%" }
+  - { name: Kotlin/Java, color: "#fdb157", value: "100%" }
+  - { name: MVVM/MVI, color: "#fdb157", value: "100%" }
+  - { name: Clean Architecture, color: "#9473e6", value: "100%" }
+  - { name: Jetpack components, color: "#bdecf6", value: "100%" }
+  - { name: Material components, color: "#bdecf6", value: "100%" }
+  - { name: Dark & Light themes, color: "#bdecf6", value: "100%" }
+  - { name: Multiple screen sizes, color: "#ffbcaa", value: "100%" }
+  - { name: Custom view, color: "#ffbcaa", value: "100%" }
+  - { name: Dependency Injection, color: "#ffbcaa", value: "100%" }
+  - { name: Jetpack Compose, color: "#ffbcaa", value: "100%" }
+  - { name: Baseline Profile, color: "#ffbcaa", value: "100%" }
+  - { name: Unit & UI testing, color: "#ffbcaa", value: "100%" }
+  - { name: RxJava/Android, color: "#ffbcaa", value: "100%" }
+  - { name: Kotlin Coroutines, color: "#ffbcaa", value: "100%" }
+  - { name: Kotlin Flows, color: "#ffbcaa", value: "100%" }
+  - { name: Firebase services, color: "#ffbcaa", value: "100%" }
+  - { name: Play features/assets, color: "#ffbcaa", value: "100%" }
 
 #-------------------------------
 # Exprerience Section
