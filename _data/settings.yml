@@ -194,54 +194,49 @@ portfolio-label:
   - { title: "ILLUSTRATION", type: "illustration" }
 
 portfolio-items:
-  - image: "assets/images/portfolio/item-1.png"
-    url: "#"
-    portfolio-type:
-      - type: "design"
-      - type: "illustration"
+  - image: "assets/images/portfolio/compose_search_bar.webp"
+    url: "/projects/compose-search-bar"
+#    portfolio-type:
+#      - type: "design"
+#      - type: "illustration"
 
-  - image: "assets/images/portfolio/item-2.png"
-    url: "#"
-    portfolio-type:
-      - type: "branding"
+  - image: "assets/images/portfolio/compose_charts.webp"
+    url: "/projects/compose-charts"
+#    portfolio-type:
+#      - type: "branding"
 
-  - image: "assets/images/portfolio/item-3.png"
-    url: "#"
-    portfolio-type:
-      - type: "illustration"
-
-  - image: "assets/images/portfolio/item-6.png"
-    url: "#"
+  - image: "assets/images/portfolio/styleable_seek_bar.webp"
+    url: "/projects/styleable-seek-bar"
     portfolio-type:
       - type: "design"
       - type: "branding"
 
-  - image: "assets/images/portfolio/item-8.png"
-    url: "#"
+  - image: "assets/images/portfolio/lined_edit_text.webp"
+    url: "/projects/lined-edit-text"
     portfolio-type:
       - type: "illustration"
 
-  - image: "assets/images/portfolio/item-5.png"
-    url: "#"
+  - image: "assets/images/portfolio/auto_dimensions.webp"
+    url: "/projects/auto-dimensions"
     portfolio-type:
       - type: "design"
 
-  - image: "assets/images/portfolio/item-1.png"
-    url: "#"
+  - image: "assets/images/portfolio/flex_image_view.jpg"
+    url: "/projects/flex-image-view"
     portfolio-type:
       - type: "branding"
 
-  - image: "assets/images/portfolio/item-3.png"
-    url: "#"
-    portfolio-type:
-      - type: "design"
-      - type: "illustration"
-      - type: "branding"
-
-  - image: "assets/images/portfolio/item-7.png"
-    url: "#"
-    portfolio-type:
-      - type: "illustration"
+#  - image: "assets/images/portfolio/item-3.png"
+#    url: "#"
+#    portfolio-type:
+#      - type: "design"
+#      - type: "illustration"
+#      - type: "branding"
+#
+#  - image: "assets/images/portfolio/item-7.png"
+#    url: "#"
+#    portfolio-type:
+#      - type: "illustration"
 
 #-------------------------------
 # Testimonials Section
