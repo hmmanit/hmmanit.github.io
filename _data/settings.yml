@@ -123,25 +123,25 @@ experience:
 education-title: Education
 education:
   - {
-      name: Marters in UX Design,
-      date: "2006",
-      organization: "Masassusets Institute of Technology",
+      name: Can Tho University,
+      date: "Sep 2015 - Sep 2019",
+      organization: "Information Technology (GPA 3.11/4)",
     }
-  - {
-      name: Honours in Fine Arts,
-      date: "2004",
-      organization: "Harvard University",
-    }
-  - {
-      name: Higher Secondary Certificat,
-      date: "2000",
-      organization: "Cardiff School",
-    }
-  - {
-      name: Secondary School Certificate,
-      date: "1998",
-      organization: "Cardiff School",
-    }
+#  - {
+#      name: Honours in Fine Arts,
+#      date: "2004",
+#      organization: "Harvard University",
+#    }
+#  - {
+#      name: Higher Secondary Certificat,
+#      date: "2000",
+#      organization: "Cardiff School",
+#    }
+#  - {
+#      name: Secondary School Certificate,
+#      date: "1998",
+#      organization: "Cardiff School",
+#    }
 
 #-------------------------------
 # Services Section
