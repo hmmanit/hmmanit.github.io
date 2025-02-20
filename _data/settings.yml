@@ -2,10 +2,10 @@
 #-------------------------------
 # General Site Settings
 
-title: Ho Minh Man
+title: HO MINH MAN
 logo:
-author: themefisher
-description: this is meta description
+#author: themefisher
+#description: this is meta description
 email: hmman.ct@gmail.com
 phone: +84 344 565 833
 address: Tan Binh District, Ho Chi Minh City
@@ -36,7 +36,7 @@ disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 # Hero Section
 
 hero:
-  hero-title: Hi! I’m <br>Man Ho<br>Android Developer
+  hero-title: I’m an<br/>Android Developer
 
 social:
   - { icon: "ti-facebook", link: "#" }
@@ -48,7 +48,7 @@ social:
 # About (Section and Page)
 
 # About Section
-blurb: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+blurb: I am an android developer with 6 years of experience, always researching and learning new techniques, ready to learn new things to meet work requirements, always keeping the mindset of testers and users to ensure the functions operate with the least possible problems.
 
 blurb-btn-link: "/about"
 blurb-btn-name: know more
