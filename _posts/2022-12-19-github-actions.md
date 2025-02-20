@@ -6,6 +6,7 @@ date:   2022-12-19 10:05:55 +0700
 image:   assets/images/blogs/github_actions.webp
 author: Man Ho
 tags:   Android Development
+github_url:  https://github.com/homanad/GitHubActions
 ---
 
 ## Android CI/CD with GitHub Actions
