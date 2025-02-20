@@ -212,7 +212,7 @@ portfolio-label:
   - { title: "BRANDING", type: "branding" }
   - { title: "ILLUSTRATION", type: "illustration" }
 
-portfolio-items:
+project-items:
   - image: "assets/images/portfolio/compose_search_bar.webp"
     url: "/projects/compose-search-bar"
 #    portfolio-type:
