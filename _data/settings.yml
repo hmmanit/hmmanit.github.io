@@ -15,6 +15,7 @@ copyright: Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.c
 
 menu:
   - { name: About, link: "/about" }
+  - { name: Experience, link: "/experience" }
   - { name: Projects, link: "/projects" }
   - { name: Blogs, link: "/blogs" }
 #  - { name: Contact, link: "/contact" }
@@ -115,25 +116,29 @@ experience-title: Experience
 experience:
   - {
     name: CELEBe,
-    icon: "celebe.png",
+    icon: "assets/images/experience/celebe.png",
+    url: "celebe",
     date: "May 2023 - Present",
     organization: "Android Developer",
   }
   - {
       name: AnySES,
-      icon: "anyses.png",
+      icon: "assets/images/experience/anyses.png",
+      url: "anyses",
       date: "Nov 2021 - May 2023",
       organization: "Android Team Leader",
     }
   - {
       name: Samsung HCMC R&D Center,
-      icon: "samsung.png",
+      icon: "assets/images/experience/samsung.png",
+      url: "samsung",
       date: "Nov 2019 - Oct 2021",
       organization: "Android Developer",
     }
   - {
       name: TMA Solutions,
-      icon: "tma.png",
+      icon: "assets/images/experience/tma.png",
+      url: "tma",
       date: "Mar 2019 - Oct 2019",
       organization: "Java Developer",
     }
