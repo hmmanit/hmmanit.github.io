@@ -24,3 +24,6 @@ signature: assets/images/about/signature.png
 Sep 2015 – Sep 2019<br/>
 Major: <b>Information Technology</b><br/>
 GPA: <b>3.11/4.00</b><br/>
+
+<a href="{{ site.data.settings.github_url }}" target="_blank" class="btn btn-dark">GitHub</a>
+<a href="{{ site.data.settings.linkedin_url }}" target="_blank" class="btn btn-dark">LinkedIn</a>
