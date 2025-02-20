@@ -117,28 +117,28 @@ experience:
   - {
     name: CELEBe,
     icon: "assets/images/experience/celebe.png",
-    url: "celebe",
+    url: "/experience/celebe",
     date: "May 2023 - Present",
     organization: "Android Developer",
   }
   - {
       name: AnySES,
       icon: "assets/images/experience/anyses.png",
-      url: "anyses",
+      url: "/experience/anyses",
       date: "Nov 2021 - May 2023",
       organization: "Android Team Leader",
     }
   - {
       name: Samsung HCMC R&D Center,
       icon: "assets/images/experience/samsung.png",
-      url: "samsung",
+      url: "/experience/samsung",
       date: "Nov 2019 - Oct 2021",
       organization: "Android Developer",
     }
   - {
       name: TMA Solutions,
       icon: "assets/images/experience/tma.png",
-      url: "tma",
+      url: "/experience/tma",
       date: "Mar 2019 - Oct 2019",
       organization: "Java Developer",
     }
