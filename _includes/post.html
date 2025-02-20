@@ -1,6 +1,6 @@
 <div class="col-lg-4 col-sm-6 mb-4">
   <article class="card shadow">
-    <img class="rounded card-img-top" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+    <a href="{{ post.url | relative_url }}"><img class="rounded card-img-top" src="{{ post.image | relative_url }}" alt="{{ post.title }}" height="200"></a>
     <div class="card-body">
       <h4 class="card-title">
         <a class="text-dark" href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -9,7 +9,7 @@
       <p class="card-text">
         {{ post.description }}
       </p>
-      <a href="{{ post.url | relative_url }}" class="btn btn-xs btn-primary">Read More</a>
+<!--      <a href="{{ post.url | relative_url }}" class="btn btn-xs btn-primary">Read More</a>-->
     </div>
   </article>
 </div>
