@@ -215,35 +215,41 @@ portfolio-label:
 project-items:
   - image: "assets/images/portfolio/compose_search_bar.webp"
     url: "/projects/compose-search-bar"
+    title: "Compose Search Bar"
 #    portfolio-type:
 #      - type: "design"
 #      - type: "illustration"
 
   - image: "assets/images/portfolio/compose_charts.webp"
     url: "/projects/compose-charts"
+    title: "Compose charts"
 #    portfolio-type:
 #      - type: "branding"
 
   - image: "assets/images/portfolio/styleable_seek_bar.webp"
     url: "/projects/styleable-seek-bar"
-    portfolio-type:
-      - type: "design"
-      - type: "branding"
+    title: "Styleable Seek Bar"
+#    portfolio-type:
+#      - type: "design"
+#      - type: "branding"
 
   - image: "assets/images/portfolio/lined_edit_text.webp"
     url: "/projects/lined-edit-text"
-    portfolio-type:
-      - type: "illustration"
+    title: "Lined Edit Text"
+#    portfolio-type:
+#      - type: "illustration"
 
   - image: "assets/images/portfolio/auto_dimensions.webp"
     url: "/projects/auto-dimensions"
-    portfolio-type:
-      - type: "design"
+    title: "Auto Dimensions"
+#    portfolio-type:
+#      - type: "design"
 
   - image: "assets/images/portfolio/flex_image_view.jpg"
     url: "/projects/flex-image-view"
-    portfolio-type:
-      - type: "branding"
+    title: "Flex Image View"
+#    portfolio-type:
+#      - type: "branding"
 
 #  - image: "assets/images/portfolio/item-3.png"
 #    url: "#"
