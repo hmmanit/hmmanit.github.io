@@ -7,23 +7,10 @@ author: Man Ho
 tags:   Android Development
 github_url: https://github.com/homanad/StyleableSeekBar
 ---
-[//]: # (---)
-
-[//]: # (layout: project)
-
-[//]: # (title: Styleable Seek Bar)
-
-[//]: # (description: An seekbar allows creating many types of shape with many options.)
-
-[//]: # (image:)
-
-[//]: # (show_tile: false)
-
-[//]: # (github_url: https://github.com/homanad/StyleableSeekBar)
-
-[//]: # (---)
 
 An seekbar allows creating many types of shape with many options.
+
+### Table of contents
 
 - [Samples](#samples)
 - [Gradle](#gradle)
@@ -35,14 +22,14 @@ An seekbar allows creating many types of shape with many options.
     - [Programmatically](#programmatically)
 - [License](#license)
 
-## Samples
+### Samples
 <img src="{% link assets/images/attachments/styleable_seek_bar/circular.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/rounded_rectangle.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/diamond.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/rectangle.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/triangle.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/hexagon.png %}" width="130" />
 
 <img src="{% link assets/images/attachments/styleable_seek_bar/circular_vertical_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/rounded_rectangle_vertical_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/diamond_vertical_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/rectangle_vertical_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/triangle_vertical_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/hexagon_vertical_border.png %}" width="130" />
 
 <img src="{% link assets/images/attachments/styleable_seek_bar/circular_gradient_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/rounded_rectangle_gradient_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/diamond_gradient_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/rectangle_gradient_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/triangle_gradient_border.png %}" width="130" /> <img src="{% link assets/images/attachments/styleable_seek_bar/hexagon_gradient_border.png %}" width="130" />
 
-## Gradle
+### Gradle
 
 Step 1. Add this in your root build.gradle at the end of repositories:
 
@@ -60,7 +47,7 @@ Step 2. Add dependency
         implementation 'com.github.homanad:StyleableSeekBar:Tag'
     }
 
-## Style
+### Style
 
 |Style | Value|
 |------|------|
@@ -71,14 +58,14 @@ Step 2. Add dependency
 |TRIANGLE|4|
 |HEXAGON|5|
 
-## Orientation
+### Orientation
 
 |Orientation | Value|
 |------|------|
 |HORIZONTAL|0|
 |VERTICAL|1|
 
-## Attributes
+### Attributes
 
 For ease of use, you can also set all values in the corresponding code
 as follows:
@@ -98,9 +85,9 @@ as follows:
 | selectedBorderWidth  | sb_selected_borderWidth	| Create a border for the active dot with this thickness         							|	Dimension		|	3dp			|
 | orientation  | sb_orientation	| The direction of seek bar        							|	[Orientation](#orientation)		|	HORIZONTAL			|
 
-## Usage
+### Usage
 
-### XML layout
+#### XML layout
 
    	<com.homanad.android.widget.seekarc.StyleableSeekBar
         android:layout_width="100dp"
@@ -112,7 +99,7 @@ as follows:
         app:sb_minimumValue="1"
         app:sb_style="circular" />
 
-### Programmatically
+#### Programmatically
 
 For ease of use, you can also set all values in the corresponding code
 as follows:
@@ -137,7 +124,7 @@ value become a dp value, I've provided two extension functions to
 convert the Int or Float type to dp, you just need to call it as an
 extension function.
 
-## License
+### License
 
 ```
 Copyright 2021 Man Ho

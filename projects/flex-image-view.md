@@ -8,26 +8,12 @@ tags:   Android Development
 github_url: https://github.com/homanad/FlexImageView
 ---
 
-[//]: # (---)
-
-[//]: # (layout: project)
-
-[//]: # (title: Flex Image View)
-
-[//]: # (description: An image view allows creating many types of images suitable for some common requirements.)
-
-[//]: # (image:)
-
-[//]: # (show_tile: false)
-
-[//]: # (github_url: https://github.com/homanad/FlexImageView)
-
-[//]: # (---)
-
 An image view allows creating many types of images suitable for some
 common requirements.
 
 <img src="{% link assets/images/attachments/flex_image_view/overview.jpg %}" width="350" />
+
+### Table of contents
 
 - [Gradle](#gradle)
 - [Usage](#usage)
@@ -37,7 +23,7 @@ common requirements.
   - [A filtered image](#a-filtered-image-view)
 - [License](#license)
 
-## Gradle
+### Gradle
 
 Step 1. Add this in your root build.gradle at the end of repositories:
 
@@ -55,9 +41,9 @@ Step 2. Add dependency
         implementation 'com.github.homanad:FlexImageView:1.0.0'
     }
 
-## Usage
+### Usage
 
-### A circular image view
+#### A circular image view
 
 This is done simply by setting *layout_width* and *layout_height* to the
 same value, and *corner_radius* by half that number or greater:
@@ -73,7 +59,7 @@ same value, and *corner_radius* by half that number or greater:
 
 <img src="{% link assets/images/attachments/flex_image_view/circular_image.jpg %}" width="250" />
 
-### A rounded image view
+#### A rounded image view
 
 Same radius for all 4 corners: A simple rounded image, this is not
 necessary *layout_width* and *layout_height* must be the same value
@@ -105,7 +91,7 @@ following 4 attributes:
 
 </p>
 
-### A border with the dashed effect
+#### A border with the dashed effect
 
 This is a whim of mine, sometimes the image is more special with a
 dotted line To do this, you just need to use these two attributes in
@@ -126,7 +112,7 @@ However, if *dash_gap* or *dash_width* are too large, it may cause an
 imbalance at the end of the border because there is not enough space
 left to break.
 
-### A filtered image view
+#### A filtered image view
 
 This helps you create a classic image, very simple with just one boolean
 attribute:
@@ -149,7 +135,7 @@ have no effect
 
 <img src="{% link assets/images/attachments/flex_image_view/color_filter.jpg %}" width="250" />
 
-### Set value in code
+#### Set value in code
 
 For ease of use, you can also set all values in the corresponding code
 as follows:
@@ -173,7 +159,7 @@ value become a dp value, I've provided two extension functions to
 convert the Int or Float type to dp, you just need to call it as an
 extension function.
 
-## License
+### License
 
 ```
 Copyright 2020 Man Ho

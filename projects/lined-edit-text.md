@@ -8,32 +8,18 @@ tags:   Android Development
 github_url: https://github.com/homanad/LinedEditText
 ---
 
-[//]: # (---)
-
-[//]: # (layout: project)
-
-[//]: # (title: Lined Edit Text)
-
-[//]: # (description: An edit text allows creating many styles of edit text with lines.)
-
-[//]: # (image:)
-
-[//]: # (show_tile: false)
-
-[//]: # (github_url: https://github.com/homanad/LinedEditText)
-
-[//]: # (---)
-
 An edit text allows creating many styles of edit text with lines.
 
 <img src="{% link assets/images/attachments/lined_edit_text/overview.png %}" width="1000" />
+
+### Table of contents
 
 - [Gradle](#gradle)
 - [Usage](#usage)
 - [Attributes](#attributes)
 - [License](#license)
 
-## Gradle
+### Gradle
 
 Step 1. Add this in your root build.gradle at the end of repositories:
 
@@ -51,7 +37,7 @@ Step 2. Add dependency
         implementation 'com.github.homanad:LinedEditText:1.0.0'
     }
 
-## Usage
+### Usage
 
 This is done simply by add this View into your layout:
 
@@ -59,7 +45,7 @@ This is done simply by add this View into your layout:
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-## Attributes
+### Attributes
 
 For ease of use, you can also set all values in the corresponding code
 as follows:
@@ -82,7 +68,7 @@ value become a dp value, I've provided two extension functions to
 convert the Int or Float type to dp, you just need to call it as an
 extension function.
 
-## License
+### License
 
 ```
 Copyright 2021 Man Ho
