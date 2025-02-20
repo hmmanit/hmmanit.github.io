@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Kotlin Flow & Channel - Part 2
+description: StateFlow & SharedFlow
 date:   2022-12-12 11:05:55 +0700
 image:   assets/images/blogs/kotlin_flow.webp
 author: Man Ho

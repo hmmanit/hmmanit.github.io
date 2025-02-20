@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Flows lifecycle-aware
+description: Collect flows with Lifecycle-aware components
 date:   2022-10-14 10:05:55 +0700
 image:   assets/images/blogs/flow_lifecycle_aware.png
 author: Man Ho

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Kotlin Flow & Channel - Part 1
+description: Streams and Flow
 date:   2022-12-12 10:05:55 +0700
 image:   assets/images/blogs/kotlin_flow.webp
 author: Man Ho

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Coroutines
+description: Explore Kotlin coroutines
 date:   2020-05-17 10:05:55 +0700
 image:  assets/images/blogs/kotlin_coroutines.webp
 author: Man Ho

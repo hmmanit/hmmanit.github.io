@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Github Actions
+description: GitHub Actions for Android CI/CD
 date:   2022-12-19 10:05:55 +0700
 image:   assets/images/blogs/github_actions.webp
 author: Man Ho
