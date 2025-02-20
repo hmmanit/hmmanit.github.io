@@ -9,16 +9,6 @@ signature: assets/images/about/signature.png
 ##### {{ site.data.settings.blurb }}
 <br/>
 
-[//]: # (### Personal information)
-
-[//]: # (Full name: <b>Man Ho Minh</b><br/>)
-
-[//]: # (DOB: <b>1996 July 20</b><br/>)
-
-[//]: # (Gender: <b>Male</b><br/>)
-
-[//]: # (Email: <b><a href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a></b><br/>)
-
 ### Education 
 ##### CAN THO UNIVERSITY
 Sep 2015 – Sep 2019<br/>

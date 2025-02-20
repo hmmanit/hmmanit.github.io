@@ -18,17 +18,7 @@ menu:
   - { name: Experience, link: "/experience" }
   - { name: Projects, link: "/projects" }
   - { name: Blogs, link: "/blogs" }
-#  - { name: Contact, link: "/contact" }
 
-#-------------------------------
-# Google Analytics Section
-
-# Analytics helps you understand who visits your website.
-# Learn more at: http://support.google.com/analytics/answer/1008065
-
-# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
-
-google-analytics: # UA-XXXXXX-X
 
 #-------------------------------
 # Comment Section (Disqus)
@@ -44,8 +34,6 @@ hero:
 social:
   - { icon: "ti-github", link: "https://github.com/homanad" }
   - { icon: "ti-linkedin", link: "https://www.linkedin.com/in/manhominh/" }
-#  - { icon: "ti-dribbble", link: "#" }
-#  - { icon: "ti-twitter", link: "#" }
 
 #-------------------------------
 # About (Section and Page)
@@ -55,36 +43,6 @@ blurb: I am an android developer with 6 years of experience, always researching 
 
 blurb-btn-link: "/about"
 blurb-btn-name: know more
-
-# About Page
-
-# Work Process Section
-work-process:
-  - title: "Research and Plan"
-    icon: "assets/images/icons/plan.png"
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-  - title: "Design and Develop"
-    icon: "assets/images/icons/design.png"
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-  - title: "Deliver"
-    icon: "assets/images/icons/print.png"
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-# My Team Section
-team:
-  - title: "Jack Schenziwe"
-    image: "assets/images/team/member-1.png"
-    designation: "Project Manager"
-
-  - title: "Julias Carlie"
-    image: "assets/images/team/member-2.png"
-    designation: "Web Developer"
-
-  - title: "John Doe"
-    image: "assets/images/team/member-3.png"
-    designation: "Designer"
 
 #-------------------------------
 # Skills Section
@@ -122,26 +80,26 @@ experience:
     organization: "Android Developer",
   }
   - {
-      name: AnySES,
-      icon: "assets/images/experience/anyses.png",
-      url: "/experience/anyses",
-      date: "Nov 2021 - May 2023",
-      organization: "Android Team Leader",
-    }
+    name: AnySES,
+    icon: "assets/images/experience/anyses.png",
+    url: "/experience/anyses",
+    date: "Nov 2021 - May 2023",
+    organization: "Android Team Leader",
+  }
   - {
-      name: Samsung HCMC R&D Center,
-      icon: "assets/images/experience/samsung.png",
-      url: "/experience/samsung",
-      date: "Nov 2019 - Oct 2021",
-      organization: "Android Developer",
-    }
+    name: Samsung HCMC R&D Center,
+    icon: "assets/images/experience/samsung.png",
+    url: "/experience/samsung",
+    date: "Nov 2019 - Oct 2021",
+    organization: "Android Developer",
+  }
   - {
-      name: TMA Solutions,
-      icon: "assets/images/experience/tma.png",
-      url: "/experience/tma",
-      date: "Mar 2019 - Oct 2019",
-      organization: "Java Developer",
-    }
+    name: TMA Solutions,
+    icon: "assets/images/experience/tma.png",
+    url: "/experience/tma",
+    date: "Mar 2019 - Oct 2019",
+    organization: "Java Developer",
+  }
 
 #-------------------------------
 # Education Section
@@ -153,178 +111,28 @@ education:
       date: "Sep 2015 - Sep 2019",
       organization: "Information Technology (GPA 3.11/4)",
     }
-#  - {
-#      name: Honours in Fine Arts,
-#      date: "2004",
-#      organization: "Harvard University",
-#    }
-#  - {
-#      name: Higher Secondary Certificat,
-#      date: "2000",
-#      organization: "Cardiff School",
-#    }
-#  - {
-#      name: Secondary School Certificate,
-#      date: "1998",
-#      organization: "Cardiff School",
-#    }
-
-#-------------------------------
-# Services Section
-
-services-title: Services
-services:
-  - {
-      name: UI Design,
-      icon: ti-palette,
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      active: ,# Add true to select section
-    }
-  - {
-      name: UX Design,
-      icon: ti-vector,
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      active: true, # Add true to select section
-    }
-  - {
-      name: Interaction Design,
-      icon: ti-panel,
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      active: ,# Add true to select section
-    }
-
-#-------------------------------
-# Portfolio (Section and Page)
-
-# Portfolio Home Section
-portfolio-home-items:
-  - image: "assets/images/portfolio/item-1.png"
-    url: "#"
-
-  - image: "assets/images/portfolio/item-2.png"
-    url: "#"
-
-  - image: "assets/images/portfolio/item-3.png"
-    url: "#"
-
-  - image: "assets/images/portfolio/item-4.png"
-    url: "#"
-
-  - image: "assets/images/portfolio/item-5.png"
-    url: "#"
-
-# Portfolio Page
-portfolio-label:
-  - { title: "UI/UX Design", type: "design" }
-  - { title: "BRANDING", type: "branding" }
-  - { title: "ILLUSTRATION", type: "illustration" }
 
 project-items:
   - image: "assets/images/portfolio/compose_search_bar.webp"
     url: "/projects/compose-search-bar"
     title: "Compose Search Bar"
-#    portfolio-type:
-#      - type: "design"
-#      - type: "illustration"
 
   - image: "assets/images/portfolio/compose_charts.webp"
     url: "/projects/compose-charts"
     title: "Compose charts"
-#    portfolio-type:
-#      - type: "branding"
 
   - image: "assets/images/portfolio/styleable_seek_bar.webp"
     url: "/projects/styleable-seek-bar"
     title: "Styleable Seek Bar"
-#    portfolio-type:
-#      - type: "design"
-#      - type: "branding"
 
   - image: "assets/images/portfolio/lined_edit_text.webp"
     url: "/projects/lined-edit-text"
     title: "Lined Edit Text"
-#    portfolio-type:
-#      - type: "illustration"
 
   - image: "assets/images/portfolio/auto_dimensions.webp"
     url: "/projects/auto-dimensions"
     title: "Auto Dimensions"
-#    portfolio-type:
-#      - type: "design"
 
   - image: "assets/images/portfolio/flex_image_view.jpg"
     url: "/projects/flex-image-view"
     title: "Flex Image View"
-#    portfolio-type:
-#      - type: "branding"
-
-#  - image: "assets/images/portfolio/item-3.png"
-#    url: "#"
-#    portfolio-type:
-#      - type: "design"
-#      - type: "illustration"
-#      - type: "branding"
-#
-#  - image: "assets/images/portfolio/item-7.png"
-#    url: "#"
-#    portfolio-type:
-#      - type: "illustration"
-
-#-------------------------------
-# Testimonials Section
-
-testimonial-items:
-  - name: "Jesica Gomez"
-    image: "assets/images/testimonial/client-1.png"
-    designation: "CEO, Funder"
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-
-  - name: "Jesica Gomez"
-    image: "assets/images/testimonial/client-1.png"
-    designation: "CEO, Funder"
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-
-  - name: "Jesica Gomez"
-    image: "assets/images/testimonial/client-1.png"
-    designation: "CEO, Funder"
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-
-#-------------------------------
-# Client Slider Section
-
-client-slider-items:
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
-
-  - logo: "assets/images/clients-logo/client-logo-2.png"
-    url: "#"
-
-  - logo: "assets/images/clients-logo/client-logo-3.png"
-    url: "#"
-
-  - logo: "assets/images/clients-logo/client-logo-4.png"
-    url: "#"
-
-  - logo: "assets/images/clients-logo/client-logo-5.png"
-    url: "#"
-
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
-
-  - logo: "assets/images/clients-logo/client-logo-2.png"
-    url: "#"
-
-  - logo: "assets/images/clients-logo/client-logo-3.png"
-    url: "#"
-
-  - logo: "assets/images/clients-logo/client-logo-4.png"
-    url: "#"
-
-  - logo: "assets/images/clients-logo/client-logo-5.png"
-    url: "#"
-
-#-------------------------------
-# Contact Section
-
-contact-title: Contact Info
-contact-email: steve.fruits@email.com
