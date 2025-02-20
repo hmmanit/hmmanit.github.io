@@ -7,7 +7,7 @@ author: Man Ho
 tags:   Android Development
 ---
 
-## What is Coroutines
+### What is Coroutines
 
 * Generally, there are two types of multitasking methods to manage multiple processes:
     * "Preemptive Multitasking": the OS manages the switching between
@@ -26,7 +26,7 @@ tags:   Android Development
   can be passed between threads, can suspend on one thread and
   resume in another thread.
 
-## Why we need Coroutines
+### Why we need Coroutines
 
 * All "painful tasks" are done using RxJava, AsyncTask
   or other methods like executors, HandlerThreads and
@@ -36,7 +36,7 @@ tags:   Android Development
 * Avoid boilerplate code coming from callbacks, make the code easy
   readable and easy to maintain.
 
-## Why we need asynchronous programming in android development?
+### Why we need asynchronous programming in android development?
 
 * Most smartphones have a refresh frequency of at least 60Hz. 
   * This means the app will refresh 60 times per second (16,666ms for every refresh). 
@@ -53,7 +53,7 @@ tags:   Android Development
       a separate thread. To achieve that, the newest, most effective way
       Currently Kotlin coroutines.
     
-## Coroutines vs. Thread
+### Coroutines vs. Thread
 
 * Coroutine and Thread are similar? - NO
 * We have Main thread (aka UI Thread), in addition we
@@ -79,7 +79,7 @@ tags:   Android Development
 
 [comment]: <> (### How threads work at a very low level inside our CPU?)
 
-#### Threads vs cores
+##### Threads vs cores
 
 * Imagine 4-cores CPU as a factory, each core corresponds to
   a worker. In this context, we have 4 workers, representing cores
@@ -92,7 +92,7 @@ tags:   Android Development
   costly and requires a lot of resources. Basically, each thread in
   The JVM takes up about 1MB of memory.
 
-#### Physical vs logical core
+##### Physical vs logical core
 
 * A physical core is a hardware part of the CPU, it is simply the
   transistor inside CPU
@@ -109,7 +109,7 @@ can work again, worker can switch to line 2 and continue working
 work, at the same time can watch line 1 work again and come back
 work on line 1. That will increase work efficiency.
 
-### Kotlin coroutines are not managed by the OS
+#### Kotlin coroutines are not managed by the OS
 
 * Kotlin coroutines are language features. OS doesn't need to care about coroutine or
   plan for it. Coroutines will manage itself by cooperative
@@ -122,14 +122,14 @@ work on line 1. That will increase work efficiency.
   bytes for each coroutine. Therefore, we can run a lot at the same time
   work at a very low cost.
 
-### Comparing
+#### Comparing
 
 * Thread is very limited, we know Thread Pool, it will limit the number of Threads at
   for a time, and coroutines are almost free, we can start
   running thousands of coroutines at the same time. It allows to run asynchronously
   in a synchronous way of writing code.
 
-### Blocking and Non-blocking
+#### Blocking and Non-blocking
 
 * Blocking and Non-blocking are ways of describing how to execute an order
   of a program
@@ -153,7 +153,7 @@ work on line 1. That will increase work efficiency.
     * Coroutines are computations that can be suspended without blocking a
       stream.
 
-## Coroutines vs. Callbacks
+### Coroutines vs. Callbacks
 
 * In the past, to use time-consuming tasks, most of us
   use callbacks, this way the task will be run under
@@ -173,9 +173,9 @@ work on line 1. That will increase work efficiency.
   task runs better, just keep writing, no need to create much
   callbacks.
 
-## New concept
+### New concept
 
-### CoroutineScope
+#### CoroutineScope
 
 * CoroutineScope is an interface that we will use to provide a scope for coroutines.
 * In Kotlin coroutines, we also have another scope
@@ -184,7 +184,7 @@ work on line 1. That will increase work efficiency.
 * In android development we rarely use GlobalScope
 * Both of these scopes are described as a reference for the coroutine context
 
-### Context - Dispatchers
+#### Context - Dispatchers
 
 * Dispatcher describes a type of thread where coroutines will be run
 * In Kotlin Android structured concurrency, it is always recommended
@@ -213,7 +213,7 @@ work on line 1. That will increase work efficiency.
 * To summarize, in Android development, the most commonly used are Main and
   IO Dispatcher.
 
-### Coroutines Builder
+#### Coroutines Builder
 
 [https://github.com/Kotlin/kotlinx.coroutines/tree/master/kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines/tree/master/kotlinx-coroutines-core)
 
@@ -243,7 +243,7 @@ work on line 1. That will increase work efficiency.
       runblocking is mainly for testing, this builder will block the thread for
       until it is done executing, this builder returns type T.
 
-#### Job
+##### Job
 
 * Holds the information of the coroutine, the job provides methods like
   cancel(), join()
@@ -265,18 +265,18 @@ work on line 1. That will increase work efficiency.
       You can pass the context as NonCancellable to make it run even if it's already
       cancel or be checked with a suspending function.
 
-#### Deferred
+##### Deferred
 
 * Deferred is a non-blocking, can be canceled if requested, about
   it also basically represents the Job coroutine, which contains the value for a
   respective work.
 * Using Deferred allows us to combine
 
-## Switch the thread of a coroutine
+### Switch the thread of a coroutine
 
 
 
-### Suspending functions
+#### Suspending functions
 
 * In Kotlin coroutines, whenever a coroutine is suspended, the
   current thread will stack frame of the function is copied and saved in
@@ -304,7 +304,7 @@ work on line 1. That will increase work efficiency.
     * Coroutine can call both suspending functions and regular functions
     * Suspending function does not block thread
 
-## Async & Await
+### Async & Await
 
 * Example:
     * Task 1: 10s
@@ -321,13 +321,13 @@ work on line 1. That will increase work efficiency.
 * But with Kotlin coroutines, we can do it simply
   simple.
 
-## Unstructured Concurrency vs. Structured Concurrency
+### Unstructured Concurrency vs. Structured Concurrency
 
 * In case we want to run multiple coroutines at the same time in one
   suspending function and get the result, there are 2 ways to do this
   there we call Structured Concurrency and Unstructured Concurrency
 
-### Unstructured Concurrency
+#### Unstructured Concurrency
 
 * This is the wrong application --- Demo StructuredConcurrency (Un)---
 * Unstructured Concurrency will not guarantee completion of all your tasks
@@ -345,7 +345,7 @@ work on line 1. That will increase work efficiency.
   exception properly. So although it may run properly in some
   case, but should not actually be used.
 
-### Structured Concurrency
+#### Structured Concurrency
 
 <!--* Set of language features and best practices introduced for Kotlin coroutines to avoid coroutines leak and manage coroutines productively-->
 * All problems arising in Unstructured Concurrency are possible
@@ -381,7 +381,7 @@ work on line 1. That will increase work efficiency.
       in it are all cancelled.
     * You can also cancel the coroutine independently.
 
-### Exception in Coroutines
+#### Exception in Coroutines
 
 * With launch:
     * When throw Exception, coroutine will stop and throw exception
@@ -394,7 +394,7 @@ work on line 1. That will increase work efficiency.
 * But if we run 100 coroutines at the same time, how can we catch them all
   exception?
 
-#### CoroutineExceptionHandler
+##### CoroutineExceptionHandler
 
 * CoroutineExceptionHandler is used as a generic catch block of
   all coroutines.
@@ -413,7 +413,7 @@ work on line 1. That will increase work efficiency.
     * Example: Caught java.io.IOException with suppressed
       [java.lang.ArithmeticException, java.lang.IndexOutOfBoundsException]
 
-### SupervisorJob
+#### SupervisorJob
 
 * Normally, when a child coroutine occurs Exception, all
   Other child coroutines will also be stopped. If you want a coroutine can you happen
@@ -423,7 +423,7 @@ work on line 1. That will increase work efficiency.
 * In addition, we also have supervisorScope, its effect is similar to
   SupervisorJob
 
-### viewModelScope
+#### viewModelScope
 
 * Following Android Architecture Component - MVVM Architecture
 * Use viewModelScope in ViewModel:
@@ -433,7 +433,7 @@ work on line 1. That will increase work efficiency.
     * This is also convenient when we want to complete coroutines only if
       ViewModel works.
     
-### lifecycleScope
+#### lifecycleScope
 
 * Google also introduced a handy scope called
   lifecycleScope, one lifecycleScope is defined for each Lifecycle
@@ -451,7 +451,7 @@ work on line 1. That will increase work efficiency.
       started
     * launchWhenResumed: run coroutine as soon as the app is up and running
     
-### Live Data Builder
+#### Live Data Builder
 
 * this block will automatically execute when live data is active, it's automatic
   decide when to stop and cancel coroutines inside it based on

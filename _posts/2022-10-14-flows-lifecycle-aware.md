@@ -31,7 +31,7 @@ from `androidx.lifecycle:lifecycle-runtime-ktx:2.4.0` library or later.
 For better understanding, read through the article by [Manuel Vivo](https://medium.com/@manuelvicnt)
 , and here we will try above things to see what is the difference. ;)
 
-## First test
+### First test
 
 * This is my
   stateFlow: <a href="https://github.com/homanad/FlowLifecycleAware/blob/master/app/src/main/java/com/homanad/android/sample/flowlifecycleaware/screens/first/vm/FirstViewModel.kt" target="_blank">
@@ -111,7 +111,7 @@ For better understanding, read through the article by [Manuel Vivo](https://medi
 * So we will not talk about `lifeCycleScope.launch` here, instead we will clarify why we have 3
   options with the same result, and if they are really the same, let's go to the second test!
 
-## Second test
+### Second test
 
 - Take a look at my
   stateFlow: <a href="https://github.com/homanad/FlowLifecycleAware/blob/master/app/src/main/java/com/homanad/android/sample/flowlifecycleaware/screens/second/vm/SecondViewModel.kt" target="_blank">
@@ -192,7 +192,7 @@ For better understanding, read through the article by [Manuel Vivo](https://medi
           operators will also affect the collector's behavior. So let's take a third test
           with `flowWithLifecycle` to see how it works!
 
-## Third test
+### Third test
 
 - As I said at second test, `flowWithLifecycle` is an operator, so the ordering of operator will
   affect to the collector.
@@ -227,7 +227,7 @@ For better understanding, read through the article by [Manuel Vivo](https://medi
 - That's a simple test case, operator is still complicated in practice, so let's try it by yourself
   and find out your best solution.
 
-## Conclusion
+### Conclusion
 
 - In normal case, we can safety use `repeatOnLifecycle`, we will no longer care about wasting
   resources, the only thing we need to do is choose the right lifecycle state to start collecting.

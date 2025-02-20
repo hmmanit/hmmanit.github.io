@@ -7,7 +7,7 @@ author: Man Ho
 tags:   Android Development
 ---
 
-## Table of contents
+### Table of contents
 - [Example source code](#example-source-code)
 - [Streams](#streams-hot---cold-streams)
     - [Cold streams](#cold-streams)
@@ -15,20 +15,20 @@ tags:   Android Development
 - [Flow](#flow)
 - [Conclusion](#conclusion)
 
-## All parts of this article
-* [Kotlin Flow & Channel - Part 1: Streams & Flow](/blogs/kotlin-flow-channel-part-1){:target="_blank"}
-* [Kotlin Flow & Channel - Part 2: StateFlow & SharedFlow](/blogs/kotlin-flow-channel-part-2){:target="_blank"}
-* [Kotlin Flow & Channel - Part 3: Channels & operators](/blogs/kotlin-flow-channel-part-3){:target="_blank"}
+### All parts of this article
+* [Kotlin Flow & Channel - Part 1: Streams & Flow](/2022/12/12/kotlin-flow-channel-part-1/){:target="_blank"}
+* [Kotlin Flow & Channel - Part 2: StateFlow & SharedFlow](/2022/12/12/kotlin-flow-channel-part-2/){:target="_blank"}
+* [Kotlin Flow & Channel - Part 3: Channels & operators](/2022/12/12/kotlin-flow-channel-part-3/){:target="_blank"}
 
-## Example source code
+### Example source code
 [GitHub](https://github.com/homanad/Flow-Channel){:target="_blank"}
 
-## Streams/ Hot - Cold streams
+### Streams/ Hot - Cold streams
 
 Before we start with the flow and new things offered by Kotlin, let's recap a little bit about
 Streams concept, types of streams and its properties.
 
-### Streams
+#### Streams
 
 * There are two types of streams: **_Hot_** and **_Cold_** streams.
 * To distinguish these two types of streams, we can rely on 3 main characteristics:
@@ -38,7 +38,7 @@ Streams concept, types of streams and its properties.
     * Laziness: when the stream starts to emit values. Can it starts eagerly or it will start when
       we request for it.
 
-#### Cold streams
+##### Cold streams
 
 * Data is produced inside the stream.
 * Cold stream has only one subscriber and is initialized only when a subscriber starts listening to
@@ -50,7 +50,7 @@ Streams concept, types of streams and its properties.
 * Sometimes, cold stream is not the same as defined, can emit different data depending on the
   listening time, like a hot stream inside a cold stream.
 
-#### Hot Streams
+##### Hot Streams
 
 * Data is produced outside the stream.
 * Data can exist without a subscriber
@@ -60,7 +60,7 @@ Streams concept, types of streams and its properties.
 * Depending on when to start listening, subscribers may receive different data.
 * A eagerly stream, always starts even without subscribers.
 
-## Flow
+### Flow
 
 * **_Flow is a cold stream_**, which means it only emits data when there is a subscriber.
 * As the name, flow is like a flow, it only flows, not stores.
@@ -86,7 +86,7 @@ Streams concept, types of streams and its properties.
     * As you can see, it doesn't matter when we start collecting data from the flow, the flow is
       always is recreated and executes the code block inside it, and emitting all the data.
     
-## Conclusion
+### Conclusion
 
 * It's about streams and Flow (cold stream), in the next article, we will talk about StateFlow and
 SharedFlow to see the difference between them ;)

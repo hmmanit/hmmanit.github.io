@@ -7,21 +7,21 @@ author: Man Ho
 tags:   Android Development
 ---
 
-## Table of contents
+### Table of contents
 - [Example source code](#example-source-code)
 - [StateFlow](#stateflow)
 - [SharedFlow](#sharedflow)
 - [Conclusion](#conclusion)
 
-## All parts of this article
-* [Kotlin Flow & Channel - Part 1: Streams & Flow](/blogs/kotlin-flow-channel-part-1){:target="_blank"}
-* [Kotlin Flow & Channel - Part 2: StateFlow & SharedFlow](/blogs/kotlin-flow-channel-part-2){:target="_blank"}
-* [Kotlin Flow & Channel - Part 3: Channels & operators](/blogs/kotlin-flow-channel-part-3){:target="_blank"}
+### All parts of this article
+* [Kotlin Flow & Channel - Part 1: Streams & Flow](/2022/12/12/kotlin-flow-channel-part-1/){:target="_blank"}
+* [Kotlin Flow & Channel - Part 2: StateFlow & SharedFlow](/2022/12/12/kotlin-flow-channel-part-2/){:target="_blank"}
+* [Kotlin Flow & Channel - Part 3: Channels & operators](/2022/12/12/kotlin-flow-channel-part-3/){:target="_blank"}
 
-## Example source code
+### Example source code
 [GitHub](https://github.com/homanad/Flow-Channel){:target="_blank"}
 
-## StateFlow
+### StateFlow
 
 * **_StateFlow is a hot stream_**, holds and emits data to subscribers, and keeps data even without
   subscriber.
@@ -63,7 +63,7 @@ tags:   Android Development
         * Observer 3: of course, depending on the time we press the button, it will start
           collecting.
 
-## SharedFlow
+### SharedFlow
 
 * **_SharedFlow is also a hot stream_**, a more customizable version than StateFlow.
 
@@ -101,7 +101,7 @@ tags:   Android Development
             * Observer 3: of course, depending on the time we press the button, it will start
               collecting, and also replay 3 letters before that.
 
-## Conclusion
+### Conclusion
 
 * It's about StateFlow and SharedFlow (hot streams), in the next article, we will talk about
   Channel to see the difference between them ;)

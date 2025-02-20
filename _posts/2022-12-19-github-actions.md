@@ -7,9 +7,9 @@ author: Man Ho
 tags:   Android Development
 ---
 
-# Android CI/CD with GitHub Actions
+## Android CI/CD with GitHub Actions
 
-## Table of contents
+### Table of contents
 - [About GitHub Actions](#about-github-actions)
 - [GitHub Actions configuration for development](#github-actions-configuration-for-development)
   - [Checkout](#step-1-checkout)
@@ -24,10 +24,10 @@ tags:   Android Development
   - [Create GitHub release](#create-github-release)
   - [Upload release artifacts](#upload-artifacts-for-the-release)
   - [The entire file content](#the-entire-master-workflow-file-content)
-  
-## About GitHub Actions
 
-## GitHub Actions configuration for development
+### About GitHub Actions
+
+### GitHub Actions configuration for development
 
 First, we need to create a YAML file inside **.github/workflows/workflow_name.yml**
 
@@ -55,7 +55,7 @@ jobs:
 
 **build** is job name, and **runs-on** that declare the virtual machine that we use.
 
-### Step 1: Checkout
+#### Step 1: Checkout
 
 After that, we have **steps** in that **build** job First of all, sure, we need to checkout the
 latest code before doing anything:
@@ -71,7 +71,7 @@ In here:
 - **name**: the name of the step
 - **uses**: declares what github action we use, it's **checkout action** version 2
 
-### Step 2: Setup JDK environment
+#### Step 2: Setup JDK environment
 
 We also need Java to build our Android app, so this is the step for setting up environment:
 
@@ -87,7 +87,7 @@ For this, we will use the **actions/setup-java** action to set up Java on the vi
 - **java-version**: describe java version that will be installed, for my project, I am using java 11
   to build it.
 
-### Step 3: Gradle caching
+#### Step 3: Gradle caching
 
 This can improve the performance of the build, it will use cached dependencies instead of
 downloading from the internet:
@@ -105,7 +105,7 @@ downloading from the internet:
 - **path**: specifies the location of the cache,
 - **key** and **restore-keys**: are used to identify the cache and restore it if necessary.
 
-### Steps 4: Build APKs
+#### Steps 4: Build APKs
 
 We run **./gradlew assembleDebug**, this command will compile and generate debug builds of all
 flavors.
@@ -115,9 +115,9 @@ flavors.
   run: ./gradlew assembleDebug
 ```
 
-### Steps 5: Deploy the debug build for testers
+#### Steps 5: Deploy the debug build for testers
 
-#### GitHub Actions secrets
+##### GitHub Actions secrets
 
 This is used to save sensitive information that you need to hide instead of declaring it directly in
 the workflow script, such as: _token, API key,..._
@@ -126,7 +126,7 @@ Steps to create a GitHub Actions secret:
 
 <img src="{% link assets/images/attachments/github_actions/new_secret.png %}" />
 
-#### Firebase App Distribution
+##### Firebase App Distribution
 
 We need two secrets: **Firebase App id** and **Firebase App distribution credential content**.
 
@@ -210,7 +210,7 @@ Likewise, I will also create a step to upload production debug APK
     file: app/build/outputs/apk/production/debug/app-production-debug.apk
 ```
 
-#### Upload APK to DeployGate
+##### Upload APK to DeployGate
 
 DeployGate is also a place that I use often in my projects because of its quickness and its easy to
 use, just register for an account to be able to use it.
@@ -236,7 +236,7 @@ for these information. And this time I will also create step to upload productio
     app_file_path: app/build/outputs/apk/production/debug/app-production-debug.apk
 ```
 
-#### Upload artifacts
+##### Upload artifacts
 
 The last one, I want to upload our debug builds to workflow artifacts:
 
@@ -250,7 +250,7 @@ The last one, I want to upload our debug builds to workflow artifacts:
       app/build/outputs/apk/production/debug/app-production-debug.apk
 ```
 
-### The entire develop workflow file content
+#### The entire develop workflow file content
 
 ```
 name: Build and upload debug APK
@@ -330,7 +330,7 @@ jobs:
             app/build/outputs/apk/production/debug/app-production-debug.apk
 ```
 
-### Let's see how it works
+#### Let's see how it works
 
 Since I configured this workflow only start when a commit is pushed or a pull_request is merged in
 **develop** branch, so I'll create a **develop** branch and push current code.
@@ -353,7 +353,7 @@ Also, both develop & production debug APKs are uploaded successfully to Firebase
 
 <img src="{% link assets/images/attachments/github_actions/deploy_gate_applications.png %}" />
 
-## GitHub Actions configuration for production/release
+### GitHub Actions configuration for production/release
 
 For production release, we have many jobs that need to do, such as: upload to Google Play
 production/internal test/open test, create a git tag and a release,... So many thing!
@@ -379,14 +379,14 @@ here.
 
 After setting up the environment, we will start creating a unsigned production release build.
 
-### Create release build
+#### Create release build
 
 ```
 - name: Create release build
   run: ./gradlew assembleProductionRelease
 ```
 
-### Sign release build
+#### Sign release build
 
 In order for a release apk to be installable on an Android device, the APK needs to be signed, in
 preparation for For this step, you first need to have the keystore file of this project. For this
@@ -429,7 +429,7 @@ Then I will also upload the artifact like the develop workflow:
     path: app/build/outputs/apk/production/release/*.apk
 ```
 
-### Create github release
+#### Create github release
 
 To create a release, I want to get information about the version code and version name of the app to
 set name for your release. So I will write 2 more gradle tasks inside **app/build.gradle**:
@@ -477,7 +477,7 @@ Now it's time to create the release:
 - tag_name & release name: I will use version name as their name
 - draft & prerelease: I won't create a draft and a pre-release, so both are false
 
-### Upload artifacts for the release
+#### Upload artifacts for the release
 
 I will save the APK path and APK name to GITHUB_ENV:
 
@@ -507,7 +507,7 @@ Then upload release artifacts:
     asset_content_type: application/zip
 ```
 
-### The entire master workflow file content
+#### The entire master workflow file content
 
 ```
 name: Build and create release
@@ -599,7 +599,7 @@ jobs:
           asset_content_type: application/zip
 ```
 
-### Let's see how it works
+#### Let's see how it works
 
 <img src="{% link assets/images/attachments/github_actions/workflow_master.png %}" />
 
@@ -613,7 +613,7 @@ Release 1.0.0 was created:
 tags/1.0.0 was created:
 <img src="{% link assets/images/attachments/github_actions/tags.png %}" />
 
-## Conclusion
+### Conclusion
 
 In short, with GitHub Actions you can do almost thing automatically. Because the GitHub Actions
 development community is very large, and the existing actions are also quite complete, try looking

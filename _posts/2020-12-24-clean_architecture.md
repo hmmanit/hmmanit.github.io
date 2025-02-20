@@ -6,5 +6,3 @@ image:   assets/images/blogs/clean_architecture.webp
 author: Man Ho
 tags:   Android Development
 ---
-
-TODO

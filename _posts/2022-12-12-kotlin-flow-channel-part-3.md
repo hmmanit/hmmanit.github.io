@@ -7,7 +7,7 @@ author: Man Ho
 tags:   Android Development
 ---
 
-## Table of contents
+### Table of contents
 - [Example source code](#example-source-code)
 - [Channel](#channel)
     - [Channel types](#channel-types)
@@ -18,15 +18,15 @@ tags:   Android Development
     - [Terminal operators](#terminal-operators)
 - [Conclusion](#conclusion)
 
-## All parts of this article
-* [Kotlin Flow & Channel - Part 1: Streams & Flow](/blogs/kotlin-flow-channel-part-1){:target="_blank"}
-* [Kotlin Flow & Channel - Part 2: StateFlow & SharedFlow](/blogs/kotlin-flow-channel-part-2){:target="_blank"}
-* [Kotlin Flow & Channel - Part 3: Channels & operators](/blogs/kotlin-flow-channel-part-3){:target="_blank"}
+### All parts of this article
+* [Kotlin Flow & Channel - Part 1: Streams & Flow](/2022/12/12/kotlin-flow-channel-part-1/){:target="_blank"}
+* [Kotlin Flow & Channel - Part 2: StateFlow & SharedFlow](/2022/12/12/kotlin-flow-channel-part-2/){:target="_blank"}
+* [Kotlin Flow & Channel - Part 3: Channels & operators](/2022/12/12/kotlin-flow-channel-part-3/){:target="_blank"}
 
-## Example source code
+### Example source code
 [GitHub](https://github.com/homanad/Flow-Channel){:target="_blank"}
 
-## Channel
+### Channel
 
 * **_Channel is a hot stream_**, it implements SendChannel and ReceiveChannel
 * `SendChannel` provides two methods to emit data:
@@ -79,9 +79,9 @@ tags:   Android Development
     * `ReceiveChannel.cancel()`: Used to stop emitting all data inside the buffer, and clear
       undelivered data (clean buffer).
 
-### Channel types
+#### Channel types
 
-#### Rendezvous Channel
+##### Rendezvous Channel
 
 * The default capacity value when initializing a `Channel` is `RENDEZVOUS`, the value
   of `RENDEZVOUS`
@@ -114,7 +114,7 @@ tags:   Android Development
           the `send()` function will be suspended and wait for an Observer to start collecting data.
           Try changing the code yourself and see the difference between `send()` and `trySend()`!
 
-#### Buffered Channel
+##### Buffered Channel
 
 * Instance of this channel is ArrayChannel. The value of `BUFFERED` is 64, that means buffer
   capacity will be 64, this will be the default value when initializing the channel as `BUFFERED`.
@@ -142,7 +142,7 @@ tags:   Android Development
         * That's the nature of the buffer, in this case it can store up to 64 letters, and almost
           infinite for **_UNLIMITED channel_**, so I'll skip the example for UNLIMITED channel.
 
-#### Unlimited Channel
+##### Unlimited Channel
 
 * Instance of this channel is LinkedListChannel. The value of `LIMITED` is `Int.MAX_VALUE`,
   basically we can assume it has unlimited buffer.
@@ -150,7 +150,7 @@ tags:   Android Development
     * `send()` functions will never be suspended.
     * `receive()` will be suspended when buffer is empty.
 
-#### Conflated Channel
+##### Conflated Channel
 
 * Instance of this channel is ConflatedChannel.
 * As for how it works, it feels like it has an unlimited buffer (`send()` will never be suspended).
@@ -165,7 +165,7 @@ tags:   Android Development
   will be lost), but also like Unlimited channel where send() never suspends, but it only holds one
   last item, try to pull my code and change it to Conflated channel for better understanding.
 
-#### Buffered Channel with custom capacity
+##### Buffered Channel with custom capacity
 
 * It is similar to BUFFERED channel, the only difference is that we pass an optional capacity value
   into the constructor.
@@ -199,7 +199,7 @@ tags:   Android Development
               inside Channel has been received, `send()` will continue to run,
               then `customizedCapacityChannel2` will continue to emit data -> consecutive series.
 
-### Difference between SendChannel.close() and ReceiveChannel.cancel():
+#### Difference between SendChannel.close() and ReceiveChannel.cancel():
 
 | SendChannel.close()                                                                          | ReceiveChannel.cancel()                                    |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
@@ -224,16 +224,16 @@ tags:   Android Development
 * There are some examples for closed and failed channels in my source code, so please try it out to
   see what happens!
 
-### Consume values
+#### Consume values
 
 * As mentioned earlier, we can receive data from a channel using `receive()` or `tryReceive()`, but
   these functions return only one value, so to process more than 1 value we can use `flow`, in here
   we can get all values from `Channel` with just one `terminal operator` (`consumeAsFlow()`
   , `consumeEach()`,...)
 
-## Operators
+### Operators
 
-### Immediate operators
+#### Immediate operators
 
 * Are operators that will not execute against the flow, instead, operators only execute something
   with the data returned from the flow, and return something else.
@@ -244,7 +244,7 @@ tags:   Android Development
 * Immediate operators are not suspendable functions, but can work with suspend functions inside,
   which means we can create a sequence of operations.
 
-### Terminal operators
+#### Terminal operators
 
 * These are suspendable functions and the purpose is to collect values from the upstream flow.
 * These are also the operators that will initialize the flow, if no operator is called, the flow
@@ -252,7 +252,7 @@ tags:   Android Development
 * As the name suggests, after calling the terminal, you won't be able to apply any other operators
 * Several terminals: `collect`, `single`, `toList`,...
 
-## Conclusion
+### Conclusion
 
 Those are the basics when we start moving from Rx and LiveData to Kotlin coroutines and flows, in
 the next article, I will go through and explain common operators or will be used in some specific
